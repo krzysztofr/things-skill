@@ -83,8 +83,10 @@ an undocumented format; if it changes, the script falls back to the
 session id and the current directory. A rename made after the to-do was
 sent is not reflected.
 
-The skill confirms with title, list and date. The URL scheme returns no
-result, so "sent" means handed to Things, not verified.
+The skill confirms with "Sent to Things: <title>" plus a line only when
+something was not obvious (list choice, resolved ambiguity). The URL
+scheme returns no result, so "sent" means handed to Things, not verified.
+Between 00:00 and 05:59 "tomorrow" means the same calendar day.
 
 "notify me" requests are deliberately left to notification skills.
 

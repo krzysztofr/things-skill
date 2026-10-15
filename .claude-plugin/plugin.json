@@ -1,7 +1,7 @@
 {
   "name": "things",
   "description": "Add to-dos to Things 3 from Claude Code - list picked from your own clues, flexible dates, notes and checklists.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": { "name": "Krzysztof Rakowski" },
   "license": "MIT",
   "homepage": "https://github.com/krzysztofr/things-skill"

@@ -45,6 +45,7 @@ Every to-do gets `when`. No time given: `when=today`.
 - All user times are Warsaw local time. Resolve relative phrases ("next
   Friday", "in 3 days", "end of month") to `YYYY-MM-DD` yourself from `date`
   output - do not pass natural language to Things. "Tonight" = `evening`.
+- Night (00:00-05:59): "tomorrow" means today's date. Do not mention it.
 
 ## Title, notes, checklist
 
@@ -109,9 +110,11 @@ own model name (e.g. `Claude Opus 5.5`); it only feeds the footer:
 `add.sh` refuses a call without `model`, `title`, `list` or `when`.
 
 Exit 0 means the URL was handed to Things - not that the to-do was
-verified (the scheme returns nothing). Confirm in one line: title, list,
-when (and deadline if set), phrased as "sent", not "added and verified".
-Non-zero exit: quote the error and stop.
+verified (the scheme returns nothing). Confirm with `Sent to Things:
+<title>` - no recap of list, date, notes or checklist. Add one short
+line only for something the user could not predict: a non-obvious list
+choice (two lists fit equally), an ambiguity you resolved, a dropped
+detail. Non-zero exit: quote the error and stop.
 
 ## Notes
 
