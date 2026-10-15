@@ -86,7 +86,9 @@ sent is not reflected.
 The skill confirms with "Sent to Things: <title>" plus a line only when
 something was not obvious (list choice, resolved ambiguity). The URL
 scheme returns no result, so "sent" means handed to Things, not verified.
-Between 00:00 and 05:59 "tomorrow" means the same calendar day.
+Between 00:00 and 05:59 "tomorrow" means the same calendar day. A Things
+reminder (alert) is set only when you give a clock time or an equivalent
+("at 15:00", "in 45 min", "midday", "end of working day" = 17:00).
 
 "notify me" requests are deliberately left to notification skills.
 

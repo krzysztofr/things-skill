@@ -39,12 +39,16 @@ matches it literally and silently falls back to Inbox on a mismatch.
 
 Every to-do gets `when`. No time given: `when=today`.
 
-- `today`, `tomorrow`, `evening`, `YYYY-MM-DD`, or `YYYY-MM-DD@HH:MM` for an
-  alert ("remind me in 45 min" = today at now + 45 min).
+- `today`, `tomorrow`, `evening`, `YYYY-MM-DD`, or `YYYY-MM-DD@HH:MM`.
+- Alert (`@HH:MM`, Things reminder) only when the user gives a clock time
+  or an equivalent: "at 15:00", "in 45 min" (now + 45 min), "midday" /
+  "noon" (12:00), "end of working day" (17:00), "morning" (09:00). No such
+  time: plain date, no alert. "Evening" / "tonight" alone = `evening`, no
+  alert.
 - `someday` / `anytime` only when the user says so explicitly.
 - All user times are Warsaw local time. Resolve relative phrases ("next
   Friday", "in 3 days", "end of month") to `YYYY-MM-DD` yourself from `date`
-  output - do not pass natural language to Things. "Tonight" = `evening`.
+  output - do not pass natural language to Things.
 - Night (00:00-05:59): "tomorrow" means today's date. Do not mention it.
 
 ## Title, notes, checklist
