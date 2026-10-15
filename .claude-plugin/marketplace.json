@@ -1,0 +1,14 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "things-skill",
+  "description": "Marketplace for the things Claude Code plugin.",
+  "owner": { "name": "Krzysztof Rakowski", "url": "https://github.com/krzysztofr" },
+  "plugins": [
+    {
+      "name": "things",
+      "description": "Add to-dos to Things 3 from Claude Code.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}
